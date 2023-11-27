@@ -21,7 +21,7 @@ const Testimonials = () => {
   return (
     <div className="bg-slate-50 mt-10 rounded p-2">
       <div className="md:p-10 max-w-7xl mx-auto">
-        <h1 className="text-5xl font-semibold text-center m-4 my-8  border-b-2 border-dark-03 p-2 w-96 mx-auto">
+        <h1 className="md:text-5xl text-3xl font-semibold text-center m-4 my-8  border-b-2 border-dark-03 p-2 md:w-96 w-72 mx-auto">
           Our Testimonials
         </h1>
         <div className="">
