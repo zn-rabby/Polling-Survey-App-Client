@@ -14,11 +14,13 @@ import {
 } from "react-icons/fa";
 import { BiBuildingHouse } from "react-icons/bi";
 import useAdmin from "../hooks/useAdmin";
+import useSurveyor from "../hooks/useSurveyor";
 
 const Dashboard = () => {
   // TODO get admin value from the database
-  const isAdmin = useAdmin();
-  // const isSurveyor = false;
+  const [isAdmin] = useAdmin();
+  const [isSurveyor] = useSurveyor();
+  console.log(isAdmin, isSurveyor);
 
   return (
     <div className="flex">
@@ -73,7 +75,7 @@ const Dashboard = () => {
               </li>
             </>
           )}
-          {/* {isSurveyor && (
+          {isSurveyor && (
             <>
               <>
                 <h2 className="text-lg font-medium bg-dark-03 rounded py-2 px-4 text-center uppercase">
@@ -105,7 +107,7 @@ const Dashboard = () => {
                 </li>
               </>
             </>
-          )} */}
+          )}
 
           <h2 className="text-lg font-medium bg-dark-03 rounded py-2 px-4 my-2 text-center uppercase">
             User Dashboard
