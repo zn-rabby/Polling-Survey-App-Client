@@ -9,7 +9,7 @@ const Payment = () => {
   return (
     <div className="max-w-5xl mx-auto bg-slate-50 border rounded-lg m-5 p-5 ">
       <h2 className="text-2xl font-semibold text-dark-03 py-2 text-center">
-        Get Pro User
+        Get Pro User: <span className="text-dark-01">50</span>$
       </h2>
       <div className="divider">Payment Naw</div>
       <div>

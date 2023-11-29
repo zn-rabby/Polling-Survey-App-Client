@@ -10,6 +10,7 @@ import AllUsers from "../Page/Dasheboard/AllUsers/AllUsers";
 import SurveyCreate from "../Page/Surveyor/SurveyCreate/SurveyCreate";
 import Contract from "../components/Contract/Contract";
 import Payment from "../Page/Payment/Payment";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -48,7 +49,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
     children: [
       {
         path: "users",
