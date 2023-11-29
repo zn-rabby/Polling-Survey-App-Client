@@ -13,7 +13,7 @@ const Nav = () => {
   };
   const navLinks = (
     <>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+      <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -23,7 +23,7 @@ const Nav = () => {
           Home
         </NavLink>
       </li>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+      <li className="text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
         <NavLink
           to="/surveys"
           className={({ isActive, isPending }) =>
@@ -33,7 +33,17 @@ const Nav = () => {
           Surveys
         </NavLink>
       </li>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+      <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+        <NavLink
+          to="/payment"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending " : isActive ? "text-dark-03 " : ""
+          }
+        >
+          Go Pro
+        </NavLink>
+      </li>
+      <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
@@ -43,7 +53,7 @@ const Nav = () => {
           About Us
         </NavLink>
       </li>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+      <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
         <NavLink
           to="/contract"
           className={({ isActive, isPending }) =>
@@ -53,7 +63,7 @@ const Nav = () => {
           Contract
         </NavLink>
       </li>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+      <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
         <NavLink
           to="/dashboard"
           className={({ isActive, isPending }) =>
@@ -63,24 +73,24 @@ const Nav = () => {
           Dashboard
         </NavLink>
       </li>
-      <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline flex items-center justify-center">
+      {/* <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline flex items-center justify-center">
         {user ? (
           <>
             <Link
               onClick={handleSignOut}
-              className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline"
+              className=" text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline"
             >
               Logout
             </Link>
           </>
         ) : (
           <>
-            <li className="mx-2 text-dark-01 text-lg font-medium hover:text-dark-03 hover:underline">
+            <li className=" text-dark-01 text-lg font-medium hover:text-dark-03 border border-dark-01 py-2 px-4 rounded">
               <Link to="/login">Login</Link>
             </li>
           </>
         )}
-      </li>
+      </li> */}
     </>
   );
   return (
@@ -156,7 +166,7 @@ const Nav = () => {
           ) : (
             <Link to="/login">
               {" "}
-              <button className="text-dark-03 hover:bg-border-dark-03 hover:text-[white] font-semibold px-4 py-2 rounded text-lg border border-border-dark-03 dark:border-white">
+              <button className="text-dark-03 hover:text-white bg-dark-01 outline  font-semibold px-3 py-1 rounded text-lg border border-dark-01">
                 Log In
               </button>{" "}
             </Link>

@@ -9,6 +9,7 @@ import About from "../components/About/About";
 import AllUsers from "../Page/Dasheboard/AllUsers/AllUsers";
 import SurveyCreate from "../Page/Surveyor/SurveyCreate/SurveyCreate";
 import Contract from "../components/Contract/Contract";
+import Payment from "../Page/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/surveys",
         element: <Surveys></Surveys>,
+      },
+      {
+        path: "/payment",
+        element: <Payment></Payment>,
       },
       {
         path: "/contract",

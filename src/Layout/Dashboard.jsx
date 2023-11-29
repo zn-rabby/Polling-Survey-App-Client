@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { IoCreate } from "react-icons/io5";
 import { GrUpdate } from "react-icons/gr";
+import { MdOutlinePayment } from "react-icons/md";
 import {
   FaAd,
   FaBacon,
@@ -126,6 +127,14 @@ const Dashboard = () => {
               className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
             >
               <FaBacon></FaBacon> Surveys
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/payment"
+              className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
+            >
+              <MdOutlinePayment /> Go Pro
             </NavLink>
           </li>
           <li>
