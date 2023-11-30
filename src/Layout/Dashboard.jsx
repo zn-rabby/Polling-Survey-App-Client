@@ -21,7 +21,6 @@ const Dashboard = () => {
   // TODO get admin value from the database
   const [isAdmin] = useAdmin();
   const [isSurveyor] = useSurveyor();
-  console.log(isAdmin, isSurveyor);
 
   return (
     <div className="flex">
@@ -100,10 +99,10 @@ const Dashboard = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/dashboard/reservation"
+                    to="/dashboard/manageSurvey"
                     className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
                   >
-                    <GrUpdate /> Survey Update
+                    <GrUpdate /> Survey Manage
                   </NavLink>
                 </li>
               </>

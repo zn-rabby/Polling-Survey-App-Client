@@ -7,7 +7,7 @@ const Surveys = () => {
   const { data: survey = [] } = useQuery({
     queryKey: ["survey"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/api/v1/show-servey");
+      const res = await axiosPublic.get("/api/v1/show-survey");
       return res.data;
     },
   });

@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
+import { toast } from "react-toastify";
 
 const CheckoutFrom = () => {
   const [error, setError] = useState("");
@@ -11,15 +12,15 @@ const CheckoutFrom = () => {
   const elements = useElements();
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
-  const totalPice = 50;
+  const totalPrice = 50;
   useEffect(() => {
     axiosSecure
-      .post("/create-payment-intent", { price: totalPice })
+      .post("/create-payment-intent", { price: totalPrice })
       .then((res) => {
         console.log(res.data.clientSecret);
         setClientSecret(res.data.clientSecret);
       });
-  }, [axiosSecure, totalPice]);
+  }, [axiosSecure, totalPrice]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -63,6 +64,25 @@ const CheckoutFrom = () => {
         console.log("transaction id", paymentIntent.id);
         setTransactionId(paymentIntent.id);
       }
+    }
+    // send data in serverside
+    const payment = {
+      email: user?.email,
+      price: totalPrice,
+      transtionId: paymentIntent?.id,
+      date: new Date().toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }),
+    };
+
+    const res = await axiosSecure.post("/payments", payment);
+    // console.log(res.data);
+    //   console.log(res.data);
+    //   console.log(res.data.result.insertedId);
+    if (res.data.result.insertedId) {
+      toast.success("Transaction has been successfull and now you pro-user");
     }
   };
   return (
