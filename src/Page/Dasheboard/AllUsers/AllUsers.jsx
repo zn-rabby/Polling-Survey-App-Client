@@ -82,6 +82,7 @@ const AllUsers = () => {
               <tr className="text-base font-semibold text-dark-01">
                 <th>##</th>
                 <th>Name</th>
+                <th>User Role</th>
                 <th>Email</th>
                 <th>Make Admin</th>
                 <th>Make Surveyor</th>
@@ -93,6 +94,7 @@ const AllUsers = () => {
                 <tr key={user._id}>
                   <th>{index + 1}</th>
                   <td>{user.name}</td>
+                  <td>{user.role}</td>
                   <td>{user.email}</td>
                   <td className="text-purple-600 font-semibold text-lg">
                     {user.role === "admin" ? (

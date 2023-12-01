@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaHome,
   FaList,
+  FaRegUser,
   FaUsers,
   FaUtensils,
 } from "react-icons/fa";
@@ -59,15 +60,16 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink
-                  to="/dashboard/booking"
+                  to="/dashboard/paymentList"
                   className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
                 >
-                  <FaAd></FaAd> Manage Booking
+                  <FaAd></FaAd> Payment History
                 </NavLink>
               </li>
+
               <li>
                 <NavLink
-                  to="/dashboard/users"
+                  to="/dashboard/usersAll"
                   className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
                 >
                   <FaUsers></FaUsers> Manage Users

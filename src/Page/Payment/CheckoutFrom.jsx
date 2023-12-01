@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const CheckoutFrom = () => {
   const [error, setError] = useState("");
@@ -63,6 +64,22 @@ const CheckoutFrom = () => {
       if (paymentIntent.status === "succeeded") {
         console.log("transaction id", paymentIntent.id);
         setTransactionId(paymentIntent.id);
+        // now save the payment in the database
+        const payment = {
+          email: user.email,
+          price: totalPrice,
+          transactionId: paymentIntent.id,
+          date: new Date(), // utc date convert
+          status: "pending",
+        };
+        const res = await axiosSecure.post("/payments-pro", payment);
+        if (res.data?.paymentResult?.insertedId) {
+          Swal.fire({
+            title: "Good job!",
+            text: "Payment Successfully!",
+            icon: "success",
+          });
+        }
       }
     }
     // send data in serverside

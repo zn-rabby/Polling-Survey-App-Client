@@ -23,7 +23,7 @@ const SurveyCared = ({ data }) => {
         <hr />
         <Link to={`/surveys/update/${_id}`}>
           <button className="text-lg mt-3 font-medium outline border border-dark-01  py-2 text-white bg-dark-01 rounded w-full text-center">
-            Start Survey
+            Details
           </button>
         </Link>
       </div>
