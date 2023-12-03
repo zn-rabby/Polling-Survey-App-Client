@@ -123,7 +123,7 @@ const Nav = () => {
           <a className=" flex gap-4 items-center font-bold text-2xl">
             <img
               className="w-12 h-12"
-              src="https://i.ibb.co/MVcB4SC/ddss-removebg-preview-1.png"
+              src="https://i.postimg.cc/VLSm6y8Q/ddss-removebg-preview-1.png"
               alt=""
             />
             <p className="text-3xl -ms-6 text-dark-03 font-bold ">OpineLink</p>

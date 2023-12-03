@@ -39,13 +39,17 @@ export const router = createBrowserRouter([
         path: "/startSurvey/:id",
         element: <StartSurvey></StartSurvey>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5002/api/v1/update-survey/${params.id}`),
+          fetch(
+            `https://polling-survey-app-server.vercel.app/api/v1/update-survey/${params.id}`
+          ),
       },
       {
         path: "/surveys/update/:id",
         element: <SurveyDetails></SurveyDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5002/api/v1/update-survey/${params.id}`),
+          fetch(
+            `https://polling-survey-app-server.vercel.app/api/v1/update-survey/${params.id}`
+          ),
       },
       {
         path: "/payment",
@@ -113,7 +117,9 @@ export const router = createBrowserRouter([
         path: "manageSurvey/surveyUpdate/:id",
         element: <SurveyUpdate></SurveyUpdate>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5002/api/v1/update-survey/${params.id}`),
+          fetch(
+            `https://polling-survey-app-server.vercel.app/api/v1/update-survey/${params.id}`
+          ),
       },
     ],
   },

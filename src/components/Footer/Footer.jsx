@@ -4,7 +4,7 @@ const Footer = () => {
       <footer className="footer md:p-6 text-white max-w-7xl mx-auto">
         <aside>
           <img
-            src="https://i.ibb.co/MVcB4SC/ddss-removebg-preview-1.png"
+            src="https://i.postimg.cc/VLSm6y8Q/ddss-removebg-preview-1.png"
             alt=""
             className="w-20"
           />
