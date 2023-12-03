@@ -19,6 +19,8 @@ import AdminRoute from "../PrivateRoute/AdminRoute";
 import Users from "../Page/Dasheboard/Users/Users";
 import PaymentList from "../Page/Dasheboard/PaymenList/PaymentList";
 import StartSurvey from "../Page/Surveys/StartSurvey";
+import SurveyorHome from "../Page/Surveyor/SurveryorHome/SurveryorHome";
+import Report from "../Page/Surveyor/Report/Report";
 
 export const router = createBrowserRouter([
   {
@@ -94,6 +96,14 @@ export const router = createBrowserRouter([
       {
         path: "createSurvey",
         element: <SurveyCreate></SurveyCreate>,
+      },
+      {
+        path: "surveyorHome",
+        element: <SurveyorHome></SurveyorHome>,
+      },
+      {
+        path: "surveyorReport",
+        element: <Report></Report>,
       },
       {
         path: "manageSurvey",

@@ -19,7 +19,7 @@ const SurveyDetails = () => {
   const { data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosPublic.get("/api/v1/all-users-for-pro");
+      const res = await axiosPublic.get("/users");
       return res.data;
     },
   });
@@ -55,6 +55,26 @@ const SurveyDetails = () => {
     }
     form.reset();
     console.log(commentRes.data);
+  };
+  // comment
+  const handleReport = async (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const report = form.report.value;
+    const commentInfo = {
+      report,
+      name: user?.displayName,
+      email: user?.email,
+      photo: user?.photoURL,
+    };
+    console.log(report);
+
+    const reportRes = await axiosPublic.post("/api/v1/report", commentInfo);
+    if (reportRes.data.insertedId) {
+      toast.success("Your comment has been published!");
+    }
+    form.reset();
+    console.log(reportRes.data);
   };
 
   const handleLike = async (_id) => {
@@ -151,16 +171,24 @@ const SurveyDetails = () => {
         {/* report */}
         <hr />
         <div className="flex items-center justify-center ">
-          <form className="my-5">
+          <form onSubmit={handleReport} className="my-5">
             <header className="footer-title text-red-500">Report</header>
             <fieldset className="form-control w-80">
               <div className="join">
                 <input
                   type="text"
+                  name="report"
                   placeholder="Report...."
                   className="input input-bordered join-item"
                 />
-                <button className="btn btn-primary join-item">Report</button>
+                <button className="btn btn-primary join-item">
+                  {" "}
+                  <input
+                    className=" font-semibold text-lg cursor-pointer"
+                    type="submit"
+                    value="Report"
+                  />
+                </button>
               </div>
             </fieldset>
           </form>

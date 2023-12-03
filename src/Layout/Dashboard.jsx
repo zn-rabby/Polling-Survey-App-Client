@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import { IoCreate } from "react-icons/io5";
 import { GrUpdate } from "react-icons/gr";
 import { MdOutlinePayment } from "react-icons/md";
+import { MdReport } from "react-icons/md";
 import {
   FaAd,
   FaBacon,
@@ -9,10 +10,7 @@ import {
   // FaCartPlus,
   FaEnvelope,
   FaHome,
-  FaList,
-  FaRegUser,
   FaUsers,
-  FaUtensils,
 } from "react-icons/fa";
 import { BiBuildingHouse } from "react-icons/bi";
 import useAdmin from "../hooks/useAdmin";
@@ -68,10 +66,18 @@ const Dashboard = () => {
                 </h2>
                 <li>
                   <NavLink
-                    to="/dashboard/userHome"
+                    to="/dashboard/surveyorHome"
                     className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
                   >
                     <FaHome></FaHome> Surveyor Home
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/dashboard/surveyorReport"
+                    className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
+                  >
+                    <MdReport /> Survey Report
                   </NavLink>
                 </li>
                 <li>
