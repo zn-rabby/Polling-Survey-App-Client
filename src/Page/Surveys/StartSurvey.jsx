@@ -30,17 +30,17 @@ const StartSurvey = () => {
     };
     console.log(surveyVote);
 
-    const surveyVoteRes = await axiosPublic.post(
-      "/api/v1/create-surveyVote",
-      surveyVote
-    );
-    console.log(surveyVoteRes.data);
-    console.log(surveyVoteRes.data.message);
-    if (surveyVoteRes.data.insertedId) {
-      toast.success("Your vote has been done!");
-    } else {
-      toast.error("You are already voted this survey!");
-    }
+    // const surveyVoteRes = await axiosPublic.post(
+    //   "/api/v1/create-surveyVote",
+    //   surveyVote
+    // );
+    // console.log(surveyVoteRes.data);
+    // console.log(surveyVoteRes.data.message);
+    // if (surveyVoteRes.data.insertedId) {
+    //   toast.success("Your vote has been done!");
+    // } else {
+    //   toast.error("You are already voted this survey!");
+    // }
     form.reset();
   };
   return (
