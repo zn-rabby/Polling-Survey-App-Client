@@ -9,7 +9,7 @@ const RecentCard = ({ data }) => {
             Title: {surveyTitle}
           </h1>
           <h2 className="text-dark-01">Category: {category}</h2>
-          <p>Description: {description}</p>
+          <p>Description: {description?.slice(0, 110)}</p>
           <hr />
           <div className="flex justify-around">
             <small className="text-base text-dark-01 font-semibold">
