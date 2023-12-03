@@ -17,7 +17,7 @@ const SurveyCared = ({ data }) => {
             like: 00
           </small>
           <small className="text-base text-dark-01 font-semibold">
-            voted: 00
+            Voted: 00
           </small>
         </div>
         <hr />

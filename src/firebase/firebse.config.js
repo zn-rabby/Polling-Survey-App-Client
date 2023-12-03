@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDFvCydwkQjaS3SfDtDrTngYdGK25_pieg",
-  authDomain: "polling-survey-app.firebaseapp.com",
-  projectId: "polling-survey-app",
-  storageBucket: "polling-survey-app.appspot.com",
-  messagingSenderId: "252461700179",
-  appId: "1:252461700179:web:8ac07f70db04201f80e2a6",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

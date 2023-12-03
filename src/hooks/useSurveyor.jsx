@@ -7,11 +7,7 @@ const useSurveyor = () => {
   const { user } = useAuth();
   const axiosSecure = useAxiosSecure();
   // const axiosPublic = useAxiosPublic();
-  const {
-    data: isSurveyor,
-    isPending: isSurveyorLoading,
-    refetch,
-  } = useQuery({
+  const { data: isSurveyor, refetch } = useQuery({
     queryKey: [user?.email, "isSurveyor"],
     queryFn: async () => {
       const res = await axiosSecure.get(`/users/surveyor/${user.email}`);
@@ -19,7 +15,7 @@ const useSurveyor = () => {
       return res.data?.surveyor;
     },
   });
-  return [isSurveyor, isSurveyorLoading, refetch];
+  return [isSurveyor, refetch];
 };
 
 export default useSurveyor;

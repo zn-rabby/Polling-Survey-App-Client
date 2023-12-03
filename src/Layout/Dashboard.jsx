@@ -43,23 +43,6 @@ const Dashboard = () => {
               </li>
               <li>
                 <NavLink
-                  to="/dashboard/addItems"
-                  className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
-                >
-                  <FaUtensils></FaUtensils>
-                  Add Items
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/dashboard/manageItems"
-                  className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
-                >
-                  <FaList></FaList> Manage Items
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
                   to="/dashboard/paymentList"
                   className="flex gap-1 px-3 py-2 items-center font-semibold hover:border-b hover:border-dark-02"
                 >

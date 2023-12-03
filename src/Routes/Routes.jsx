@@ -18,6 +18,7 @@ import AdminHome from "../Page/Dasheboard/AdminHome/AdminHome";
 import AdminRoute from "../PrivateRoute/AdminRoute";
 import Users from "../Page/Dasheboard/Users/Users";
 import PaymentList from "../Page/Dasheboard/PaymenList/PaymentList";
+import StartSurvey from "../Page/Surveys/StartSurvey";
 
 export const router = createBrowserRouter([
   {
@@ -31,6 +32,12 @@ export const router = createBrowserRouter([
       {
         path: "/surveys",
         element: <Surveys></Surveys>,
+      },
+      {
+        path: "/startSurvey/:id",
+        element: <StartSurvey></StartSurvey>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5002/api/v1/update-survey/${params.id}`),
       },
       {
         path: "/surveys/update/:id",
@@ -74,11 +81,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "paymentList",
-        element: (
-          <AdminRoute>
-            <PaymentList></PaymentList>
-          </AdminRoute>
-        ),
+        element: <PaymentList></PaymentList>,
       },
       {
         path: "usersAll",

@@ -18,7 +18,7 @@ const PaymentList = () => {
           Payment List
         </h2>
         <h2 className="text-3xl font-semibold text-center text-dark-01">
-          Total: : {payments.length}
+          Total: {payments?.length}
         </h2>
       </div>
       <div>
@@ -35,7 +35,7 @@ const PaymentList = () => {
               </tr>
             </thead>
             <tbody>
-              {payments.map((pay, index) => (
+              {payments?.map((pay, index) => (
                 <tr key={pay._id}>
                   <th>{index + 1}</th>
                   <td>{pay.email}</td>
