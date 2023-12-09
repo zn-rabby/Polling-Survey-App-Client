@@ -6,12 +6,16 @@
 
 ### Project Features
 
-- Our Polling and Survey App with Payment Integration system app.
-- If you can visited website must be registration and login this website.
-- Dashboard use to user, surveyor and admin role specific .
-- Responsive for All Device
-- Hear you can participate to survey
-- You can added survey and delete, update.
+- Authentication.
+- Dashboard Layouts.
+- User Management.
+- Survey Management.
+- Survey Filters.
+- Payments.
+- Data Tables.
+- Search Functionality.
+- Responsive Layouts.
+- Role-based Access.
 
 ## Technologies
 
