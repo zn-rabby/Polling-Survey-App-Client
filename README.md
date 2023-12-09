@@ -13,6 +13,25 @@
 - Hear you can participate to survey
 - You can added survey and delete, update.
 
+## Technologies
+
+### 1. Client Side:
+
+- React
+- Tailwind Css
+- Firebase (Authentication)
+- JWT
+- React Hot Toast
+- Toastify
+- Daisy UI
+- React Data Table Component (Table)
+- Stripe (Payment Integration)
+
+### 1. Server Side:
+
+- Express JS
+- MongoDB
+
 ### Description
 
 Advanced Polling and Survey App with Payment Integration
