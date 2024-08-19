@@ -27,7 +27,7 @@ const Nav = () => {
         <NavLink
           to="/surveys"
           className={({ isActive, isPending }) =>
-            isPending ? "pending " : isActive ? "text-dark-03 " : ""
+            isPending ? "pending " : isActive ? "text-green-300 " : ""
           }
         >
           Surveys

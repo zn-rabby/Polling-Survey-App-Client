@@ -6,7 +6,7 @@ const Footer = () => {
           <img
             src="https://i.postimg.cc/VLSm6y8Q/ddss-removebg-preview-1.png"
             alt=""
-            className="w-20"
+            className="w-40"
           />
           <p>
             <span className="text-xl">MartPlace Ltd.</span>

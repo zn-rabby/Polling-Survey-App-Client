@@ -40,3 +40,6 @@
 
 Advanced Polling and Survey App with Payment Integration
 Welcome to our cutting-edge Polling and Survey application developed using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project combines seamless survey creation, efficient voting processes, and in-depth result analysis. Notably, it integrates secure payment functionalities for a comprehensive user experience. The platform boasts a robust user management system, ensuring smooth user interaction and personalized experiences. As a pivotal team member, you'll contribute to crafting this feature-rich application, emphasizing an intuitive interface and dynamic functionality. The project also includes the creation of an admin dashboard with role management, empowering administrators to oversee and control the survey ecosystem efficiently. Join us in revolutionizing the world of online surveys with our innovative and user-friendly solution.
+
+## Developer:
+- Zulkar Naeem Rabby
